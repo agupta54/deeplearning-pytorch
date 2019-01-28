@@ -55,3 +55,19 @@ import matplotlib.pylot as plt
 plt.plot(x.numpy(), y.numpy())
 plt.show()
 ```
+## Tensors in 2-Dimension
+
+A 2-D tensor is a container of information. Each column in a tensor is called a feature and each row is a sample.
+Grayscale images can be represented as 2-D tensors. 0 correponds to black and 255 corresponds to white. 
+Tensors can be extended to 3 dimensions, 4 dimensions and so on. 
+
+```
+a = [[11,12,13], [21,22,23], [31,32,33]]
+A = torch.tensor(a)
+A.ndimension()
+A.shape()
+A.size()
+A = torch.tensor([[0,1,2],[1,0,1]])
+B = torch.tensor([[1,1],[1,1],[-1,1]])
+C = torch.mm(A,B)
+```
