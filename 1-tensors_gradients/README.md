@@ -10,7 +10,7 @@ Parameters are a kind of tensor that will allow you to calculate the gradient or
 
 ## Tensors in One-Dimension 
 
-```
+```python
 import torch 
 import numpy as np 
 a = torch.tensor([0,1,2,3,4])
@@ -30,7 +30,7 @@ All elements have to be the same data type inside the tensor and the indexing st
 
 ### Basic Operations  
 
-```
+```python
 # Vector addition is element wise 
 u = torch.tensor([1,0])
 v = torch.tensor([0,1])
@@ -61,7 +61,7 @@ A 2-D tensor is a container of information. Each column in a tensor is called a 
 Grayscale images can be represented as 2-D tensors. 0 correponds to black and 255 corresponds to white. 
 Tensors can be extended to 3 dimensions, 4 dimensions and so on. 
 
-```
+```python
 a = [[11,12,13], [21,22,23], [31,32,33]]
 A = torch.tensor(a)
 A.ndimension()
@@ -71,3 +71,8 @@ A = torch.tensor([[0,1,2],[1,0,1]])
 B = torch.tensor([[1,1],[1,1],[-1,1]])
 C = torch.mm(A,B)
 ```
+
+## Differentiation in PyTorch 
+
+
+
