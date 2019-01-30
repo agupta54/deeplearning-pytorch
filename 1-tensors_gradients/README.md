@@ -74,5 +74,27 @@ C = torch.mm(A,B)
 
 ## Differentiation in PyTorch 
 
+PyTorch takes derivatives of only scalar functions. 
 
-
+```python 
+x = torch.tensor(2.0, requires_grad=True)
+y = x**2 
+y.backward() 
+x.grad 
+# partial derivatives 
+u = torch.tensor(1.0, requires_grad=True)
+v = torch.tensor(2.0, requires_grad=True)
+f = u*v + u**2 
+f.backward() 
+u.grad
+v.grad 
+# calculating gradients 
+x = torch.linspace(-10.0,10.0,10, requires_grad=True)
+y = x**2
+Y = torch.sum(x**2)
+Y.backward()
+plt.plot(x.detach().numpy(), y.detach().numpy(), label='function')
+plt.plot(x.detach().numpy(), x.grad.numpy(), label='derivative')
+plt.legend() 
+plt.show()
+```
