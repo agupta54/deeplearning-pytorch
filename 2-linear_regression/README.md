@@ -47,7 +47,7 @@ import torch
 w = torch.tensor(-10.0, requires_grad=True)
 X = torch.arange(-3,3,0.1).view(-1,1)
 f = -3*X
-plt.plot(X.numpy(),nf.numpy())
+plt.plot(X.numpy(),f.numpy())
 plt.show()
 Y = f+0.1*torch.rand(X.size())
 
